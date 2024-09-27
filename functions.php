@@ -15,15 +15,36 @@ if ( ! defined( 'ABSPATH' ) ) {
   do_action( 'custom_footer' );
 
 function theme_style(){
-	// wp_register_style('style-css', get_template_directory_uri() . '/style.css', false);
-    // wp_enqueue_style('style-css');
-
+	wp_register_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', false);
+    wp_enqueue_style('bootstrap-css');
+	
+	wp_register_style('fonawsome-css', get_template_directory_uri() . '/assets/css/all.min.css', false);
+    wp_enqueue_style('fonawsome-css');
+	
+	wp_register_style('style-css', get_template_directory_uri() . '/style.css', false);
+	wp_enqueue_style('style-css');
+	
+	wp_register_style('owl.carousel.min-css', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', false);
+    wp_enqueue_style('owl.carousel.min-css');
+	wp_register_style('owl.theme.default.min-css', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css', false);
+    wp_enqueue_style('owl.theme.default.min-css');
+	wp_register_style('animate.min-css', get_template_directory_uri() . '/assets/css/animate.min.css', false);
+    wp_enqueue_style('animate.min-css');
+	wp_register_style('jquery.fancybox.min-css', get_template_directory_uri() . '/assets/css/jquery.fancybox.min.css', false);
+    wp_enqueue_style('jquery.fancybox.min-css');
+	
 }
 add_action('wp_head','theme_style');
 
 function theme_script(){
-	// wp_register_script('jquery-js', 'https://code.jquery.com/jquery-3.7.1.js', false);
-    // wp_enqueue_script('jquery-js');
+	wp_register_script('bootstrap.bundle.min-js',get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', false);
+    wp_enqueue_script('bootstrap.bundle.min-js');
+	wp_register_script('jquery.min-js','https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js', false);
+    wp_enqueue_script('jquery.min-js');
+	wp_register_script('owl.carousel.min-js',get_template_directory_uri() . '/assets/js/owl.carousel.min.js', false);
+    wp_enqueue_script('owl.carousel.min-js');
+	wp_register_script('jquery.fancybox.min-js',get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', false);
+    wp_enqueue_script('jquery.fancybox.min-js');
 }
 add_action('wp_footer','theme_script');
 
