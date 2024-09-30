@@ -10,7 +10,7 @@ get_header();
         while ( have_posts() ) : the_post();
         ?>
         
-        Hello
+        Post Details
         <?php
         endwhile;
 
